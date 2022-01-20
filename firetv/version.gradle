@@ -4,5 +4,5 @@ ext {
     // bump it for any new feature increment this.
     versionMinor = 2
     // bump it for every incremental build
-    versionPatch = 6
+    versionPatch = 7
 }
