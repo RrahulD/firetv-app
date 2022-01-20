@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="@dimen/epg_default_hairline_text_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right">
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="#E040FB"/>
+
+        <TextView
+            android:id="@+id/textViewNow"
+            android:layout_width="@dimen/epg_default_hairline_text_width"
+            android:layout_height="18dp"
+            android:layout_marginTop="5dp"
+            android:background="#E040FB"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="NOW"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"/>
+
+    </FrameLayout>
+</FrameLayout>

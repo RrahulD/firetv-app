@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/epg_dialog_background_color">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/epg_dialog_card_background_color"
+        app:cardCornerRadius="@dimen/_4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="@dimen/_40dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Rockies vs Pirates" />
+
+            <TextView
+                android:id="@+id/scheduleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="Was live @6PM" />
+
+            <ImageView
+                android:id="@+id/home_team_icon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHeight_percent=".15"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleText"
+                app:layout_constraintWidth_percent=".15"
+                tools:src="@drawable/ic_sports" />
+
+            <ImageView
+                android:id="@+id/away_team_icon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintHeight_percent=".15"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleText"
+                app:layout_constraintWidth_percent=".15"
+                tools:src="@drawable/ic_sports" />
+
+            <TextView
+                android:id="@+id/home_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/home_team_icon"
+                app:layout_constraintStart_toStartOf="@+id/home_team_icon"
+                app:layout_constraintTop_toBottomOf="@+id/home_team_icon"
+                tools:text="2" />
+
+            <TextView
+                android:id="@+id/away_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/away_team_icon"
+                app:layout_constraintStart_toStartOf="@+id/away_team_icon"
+                app:layout_constraintTop_toBottomOf="@+id/away_team_icon"
+                tools:text="2" />
+
+            <Button
+                android:id="@+id/see_stats"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40dp"
+                android:background="@drawable/primary_button_background"
+                android:text="@string/see_stats"
+                android:textColor="@drawable/text_button_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_score"
+                android:layout_marginTop="@dimen/_20dp"
+                android:textAllCaps="true"
+                app:layout_constraintWidth_percent=".5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="192dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

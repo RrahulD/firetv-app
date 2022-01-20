@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default fallback theme colors -->
+    <color name="guest_primary_color">#D9A223</color>
+    <color name="resident_primary_color">#385DF7</color>
+    <color name="resident_secondary_color">#14111E</color>
+    <color name="live_color">#FF1616</color>
+    <color name="header_text_default">#99DDDDDD</color>
+    <color name="header_text_active">#ffffff</color>
+
+    <!-- chip background colors -->
+    <color name="live_chip_background">#191919</color>
+    <color name="live_chip_background_player">#4DAAAAAA</color>
+    <color name="live_chip_background_carousel">#4DAAAAAA</color>
+    <color name="advert_chip_background">#80191919</color>
+
+    <!-- widget text color-->
+    <color name="widget_heading">#ffffff</color>
+    <color name="widget_sub_heading">#BFF8F8F8</color>
+    <color name="widget_text">#ffffff</color>
+
+    <color name="widget_background_dark">#191919</color>
+    <color name="main_fragment_background_overlay">#B3050505</color>
+    <color name="time_bar_background">#66F8F8F8</color>
+
+    <!-- home carousel overlay gradient colors -->
+    <color name="carousel_gradient_start_color">#E6000000</color>
+    <color name="carousel_gradient_end_color">#4D000000</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="splash_background_color">#050505</color>
+    <color name="brand_primary_color">#050505</color>
+    <color name="brand_secondary_color">#385df7</color>
+
+    <!-- classic epg related colors, required by the acccedo library -->
+    <color name="epg_background">#B3050505</color>
+    <color name="epg_program_background">#14AAAAAA</color>
+    <color name="epg_program_program_number_text_color">#f8f8f8</color>
+    <color name="epg_hairline_color">#14AAAAAA</color>
+    <color name="epg_dialog_card_background_color">#191919</color>
+    <color name="epg_dialog_background_color">#99050505</color>
+    <color name="parental_pin_dialog_background_color">#88050505</color>
+    <color name="parental_pin_dialog_background">#191919</color>
+
+    <!--primary button -->
+    <color name="primary_button_selected">#385df7</color>
+    <color name="primary_button_unselected">#33FFFFFF</color>
+    <color name="text_button_unselected_color">#f8f8f8</color>
+
+    <color name="player_transparency_color">#B0050505</color>
+    <color name="title_setting_option">#AAAAAA</color>
+    <color name="settings_sub_light_background">#26DDDDDD</color>
+    <color name="faq_answer_text_color">#DDDDDDDD</color>
+    <color name="parental_control_text_color">#5e5e5e</color>
+
+    <color name="parental_pin_heading_text_color">#F8F8F8</color>
+    <color name="parental_pin_description_text_color">#DDDDDD</color>
+    <color name="parental_forgot_pin_text_color">#AAAAAA</color>
+
+    <color name="details_genre_rating_text">#B3F8F8F8</color>
+
+    <!-- on demand details overlay gradient colors -->
+    <color name="on_demand_details_gradient_start_color">#1F000000</color>
+    <color name="on_demand_details_gradient_end_color">#A6000000</color>
+
+</resources>

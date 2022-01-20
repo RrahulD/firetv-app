@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp"
+    tools:context=".ui.main.settings.legalandabout.privacypolicy.PrivacyPolicyFragment">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Privacy Policy"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@color/brand_secondary_color">
+
+        <TextView
+            android:id="@+id/paragraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/faq_answer_text_color"
+            android:textSize="14sp"
+            tools:text="Quid ex ea commodi consequatur? quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut ratione et rationibus confirmare, tantum satis esse vult, summumque malum dolorem, idque instituit docere sic: omne animal, simul atque integre iudicante itaque aiunt hanc quasi." />
+    </ScrollView>
+</LinearLayout>

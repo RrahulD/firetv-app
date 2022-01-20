@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/channel_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/_40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_channel"
+                android:layout_width="105dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="KUSA-HD" />
+
+            <ImageView
+                android:id="@+id/iv_modern_channel"
+                android:layout_width="105dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_channel_logo_player"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_programs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/channel_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="10"
+            tools:listitem="@layout/view_epg_zoomed_modern_program">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout>

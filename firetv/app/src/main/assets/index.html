@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #title{
+        color:white
+    }
+</style>
+<body>
+
+<h1 id="title">Dish programs</h1>
+<button onclick="openClassicEPG()">Open classic EPG</button>
+<button onclick="openModernEPG()">Open modern EPG</button>
+<button onclick="toggleZoomEPG()">Toggle Zoom</button>
+</body>
+<script type="text/javascript">
+
+    function openClassicEPG(){
+     FireTVTabHandler.onTabSelected("classic_epg")
+    }
+
+    function openModernEPG(){
+    FireTVTabHandler.onTabSelected("modern_epg")
+    }
+
+    function toggleZoomEPG(){
+    FireTVTabHandler.toggleZoom()
+    }
+
+</script>
+</html>

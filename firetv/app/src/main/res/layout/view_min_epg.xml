@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/player_transparency"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/player_transparency_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/channels_list"
+        android:layout_width="@dimen/_400dp"
+        android:layout_height="@dimen/_300dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="@dimen/_40dp" />
+
+</FrameLayout>

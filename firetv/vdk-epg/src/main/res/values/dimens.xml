@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="epg_default_channels_width">96dp</dimen>
+    <dimen name="epg_default_row_height">64dp</dimen>
+    <dimen name="epg_default_minute_width">4dp</dimen>
+    <dimen name="epg_default_timebar_height">32dp</dimen>
+    <dimen name="epg_default_timebar_offset_horizontal">0dp</dimen>
+    <dimen name="epg_default_hairline_text_width">42dp</dimen>
+    <dimen name="epg_default_diagonal_scroll_detection_offset">16dp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwimLane">
+        <attr name="swimLaneItemHeight" format="dimension"/>
+        <attr name="swimLaneItemWidth" format="dimension"/>
+        <attr name="itemSpacing" format="dimension"/>
+        <attr name="android:orientation"/>
+    </declare-styleable>
+</resources>

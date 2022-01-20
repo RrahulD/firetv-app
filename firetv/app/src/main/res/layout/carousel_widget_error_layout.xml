@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingVertical="@dimen/carousel_widget_vertical_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/content_guideline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/error_chip"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4dp"
+        android:background="@drawable/live_chip_background"
+        android:paddingHorizontal="@dimen/_8dp"
+        android:paddingVertical="@dimen/_4dp"
+        android:text="@string/error"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/program_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/content_unavailable"
+        android:textColor="@color/widget_heading"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="@id/content_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/error_chip" />
+
+    <ImageView
+        android:id="@+id/channel_logo"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_60dp"
+        android:layout_margin="@dimen/_8dp"
+        android:paddingTop="@dimen/_4dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_warning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/program_title" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_4dp"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.1"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintEnd_toStartOf="@id/content_guideline"
+        app:layout_constraintStart_toEndOf="@id/channel_logo"
+        app:layout_constraintTop_toTopOf="@id/channel_logo"
+        android:text="@string/content_unavailable_message" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toStartOf="@id/content_guideline"
+            app:layout_constraintStart_toStartOf="@id/subtitle"
+            app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout>

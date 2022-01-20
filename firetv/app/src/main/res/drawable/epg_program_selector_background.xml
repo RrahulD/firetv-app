@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_focused="true">
+    <inset android:drawable="@drawable/epg_program_selected_background"/>
+</item>
+    <item android:state_focused="false">
+        <inset android:drawable="@drawable/epg_program_unselected_background"/>
+    </item>
+</selector>

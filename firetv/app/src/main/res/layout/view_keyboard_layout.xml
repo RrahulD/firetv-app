@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_a"
+            style="@style/Keyboard_keys"
+            android:nextFocusUp="@+id/search"
+            android:text="@string/key_a" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_b"
+            style="@style/Keyboard_keys"
+            android:nextFocusUp="@+id/search"
+            android:text="@string/key_b" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_c"
+            style="@style/Keyboard_keys"
+            android:nextFocusUp="@+id/search"
+            android:text="@string/key_c" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_d"
+            style="@style/Keyboard_keys"
+            android:nextFocusUp="@+id/search"
+            android:text="@string/key_d" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_e"
+            style="@style/Keyboard_keys"
+            android:nextFocusUp="@+id/search"
+            android:text="@string/key_e" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_f"
+            style="@style/Keyboard_keys"
+            android:nextFocusUp="@+id/search"
+            android:text="@string/key_f" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_g"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_g" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_h"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_h" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_i"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_i" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_j"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_j" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_k"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_k" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_l"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_l" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_m"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_m" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_n"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_n" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_o"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_o" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_p"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_p" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_q"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_r"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_r" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_s"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_s" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_t"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_t" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_u"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_u" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_v"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_v" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_w"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_w" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_x"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_x" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_y"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_y" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_z"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_z" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_1"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_2"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_3"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_4"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_5"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_6"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_7"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_8"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_8" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_9"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_9" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key_0"
+            style="@style/Keyboard_keys"
+            android:text="@string/key_0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35dp"
+        android:id="@+id/bottomParent"
+        android:layout_marginTop="@dimen/_5dp"
+        android:paddingStart="@dimen/_5dp"
+        android:paddingEnd="@dimen/_5dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/_16sp"
+            android:paddingTop="@dimen/_5dp"
+            android:paddingBottom="@dimen/_5dp"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@+id/key_space"
+            android:background="@drawable/keyboard_btn_selector"
+            android:id="@+id/key_space"
+            android:text="@string/key_space" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/key_delete"
+            android:focusable="true"
+            android:padding="@dimen/_4dp"
+            android:focusableInTouchMode="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/keyboard_btn_selector"
+            android:src="@drawable/keyboard_back_key_zoomed" />
+
+    </LinearLayout>
+</LinearLayout>

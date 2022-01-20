@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_40dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textSize="@dimen/_15sp"
+    android:id="@+id/recentSearchBtns"
+    android:gravity="center"
+    android:paddingStart="@dimen/_10dp"
+    android:paddingEnd="@dimen/_10dp"
+    android:layout_marginEnd="@dimen/_10dp"
+    android:nextFocusUp="@+id/search"
+    android:focusable="true"
+    android:textAllCaps="true"
+    android:textColor="@color/text_button_unselected_color"
+    android:fontFamily="@font/roboto_regular"
+    android:background="@drawable/keyboard_btn_selector"
+    tools:text="Avengers">
+
+</androidx.appcompat.widget.AppCompatButton>

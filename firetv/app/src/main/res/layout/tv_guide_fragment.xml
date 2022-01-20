@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.tvguide.TVGuideFragment">
+
+    <hu.accedo.commons.widgets.epg.EpgView
+        android:id="@+id/epg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="12dp"
+        android:nextFocusUp="@id/navigation_view"
+        android:visibility="gone"
+        app:epgview_channels_width="150dp"
+        app:epgview_days_backwards="0"
+        app:epgview_days_forward="0"
+        app:epgview_looping_enabled="false"
+        app:epgview_minute_width="@dimen/_9dp"
+        app:epgview_page_size_horizontal="_24h"
+        app:epgview_placeholders_enabled="false"
+        app:epgview_progress_view="@id/progressBar"
+        app:epgview_row_height="60.5dp"
+        app:epgview_sticky_programs_enabled="true"
+        app:epgview_timebar_label_enabled="true"
+        app:epgview_update_frequency_seconds="60"
+        app:epgview_view_cache_size="100"
+        app:epgview_view_clipping_enabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <tv.accedo.dishonstream2.ui.main.tvguide.view.ModernEPGView
+        android:id="@+id/modern_epg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/white"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/error_section"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20dp"
+            android:src="@drawable/ic_warning" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/epg_unavailable"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:gravity="center"
+            android:text="@string/epg_unavailable_message"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp" />
+    </LinearLayout>
+</FrameLayout>

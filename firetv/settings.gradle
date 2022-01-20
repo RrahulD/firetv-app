@@ -1,0 +1,9 @@
+include ':domain'
+include ':data'
+include ':app'
+
+// accedo libraries
+include ':vdk-core'
+include ':vdk-epg'
+include ':control-sdk'
+rootProject.name = "DishOnStream2"

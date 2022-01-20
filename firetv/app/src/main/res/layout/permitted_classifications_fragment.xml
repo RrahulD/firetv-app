@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.settings.parentalcontrols.permittedclassifications.PermittedClassificationsFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_40dp">
+
+            <LinearLayout
+                android:id="@+id/young_kids_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/young_kids_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/young_kids"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/title_setting_option"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/all_ages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:nextFocusUp="@id/settings"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/key_g"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/all_ages_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:text="@string/all_ages"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/all_ages_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ages_2_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/key_y"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ages_2_6_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:text="@string/ages_2_6"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ages_2_6_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kids_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/kids_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kids"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/title_setting_option"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ages_7_and_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/y7"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ages_7_and_up_text"
+                        android:layout_width="@dimen/_10dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="@string/ages_7_and_up"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ages_7_and_up_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ages_7_and_up_fantasy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/y7_fv"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ages_7_and_up_fantasy_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_weight="1"
+                        android:text="@string/ages_7_and_up_fantasy"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ages_7_and_up_fantasy_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/teenagers_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/teenagers_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:paddingRight="@dimen/_10dp"
+                    android:text="@string/teenagers"
+                    android:textColor="@color/title_setting_option"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/parental_guidance_recommended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/pg"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/parental_guidance_recommended_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_weight="1"
+                        android:text="@string/parental_guidance_recommenced"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/parental_guidance_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/parents_strongly_cautioned"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/pg_13"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/parents_strongly_cautioned_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/parents_strongly_cautioned"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/parents_strongly_cautioned_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/unsuitable_under_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/pg_14"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/unsuitable_under_14_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:text="@string/unsuitable_under_14"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/unsuitable_under_14_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adults_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/adults_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adults"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/title_setting_option"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/unsuitable_under_17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/ma"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/unsuitable_under_17_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/unsuitable_under_17"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/unsuitable_under_17_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/restricted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/key_r"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/restricted_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:text="@string/restricted"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/restricted_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adults_only"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/nc_17"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/adults_only_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:text="@string/adults_only"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/adults_only_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/unrated_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/permitted_classifications_option_text_background"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingTop="@dimen/_4dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:paddingBottom="@dimen/_4dp"
+                        android:text="@string/unrated"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/unrated_content_text"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:text="@string/unrated_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/unrated_content_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/restore_default_settings_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/restore_default_settings_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restore_default_settings"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/title_setting_option"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/reset_app_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/settings_sub_option_background"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/parental_controls"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:src="@drawable/exo_ic_forward" />
+
+                    <TextView
+                        android:id="@+id/reset_app_settings_text"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/reset_app_settings"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/changes_saved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/_30dp"
+                android:background="@drawable/settings_sub_option_background"
+                android:focusable="true"
+                android:gravity="right"
+                android:visibility="gone"
+                android:nextFocusLeft="@id/parental_controls"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:id="@+id/changesSavedTickImage"
+                    android:src="@drawable/ic_check" />
+
+                <TextView
+                    android:id="@+id/changes_saved_text"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:text="@string/changes_saved"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

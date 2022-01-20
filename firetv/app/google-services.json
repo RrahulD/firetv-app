@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "641957044642",
+    "project_id": "dish-onstream-2",
+    "storage_bucket": "dish-onstream-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641957044642:android:bdbd8fdcaf92d3c91492fb",
+        "android_client_info": {
+          "package_name": "tv.accedo.xdk.dishtv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641957044642-2qdif5a7c4vqpbhfnsr30d9ddqbf2ep9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr99hQPmGpP2NAZYgO2NBEtsgWTNWbrjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641957044642-2qdif5a7c4vqpbhfnsr30d9ddqbf2ep9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641957044642:android:0296e148d5e7ada01492fb",
+        "android_client_info": {
+          "package_name": "tv.accedo.xdk.dishtv.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641957044642-2qdif5a7c4vqpbhfnsr30d9ddqbf2ep9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr99hQPmGpP2NAZYgO2NBEtsgWTNWbrjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641957044642-2qdif5a7c4vqpbhfnsr30d9ddqbf2ep9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

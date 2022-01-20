@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/epg_dialog_background_color">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/epg_dialog_card_background_color"
+        app:cardCornerRadius="@dimen/_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/today_forecast_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toTopOf="@+id/city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/weather_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/today_forecast_icon"
+                tools:text="Denver" />
+
+            <TextView
+                android:id="@+id/weather_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/high_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/city"
+                tools:text="Scattered Storms" />
+
+            <TextView
+                android:id="@+id/now_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toTopOf="@+id/temperature_high"
+                app:layout_constraintEnd_toStartOf="@+id/high_label"
+                app:layout_constraintTop_toTopOf="@+id/high_label" />
+
+            <TextView
+                android:id="@+id/high_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/high"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toTopOf="@+id/temperature_high"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weather_description" />
+
+            <TextView
+                android:id="@+id/low_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/low"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toTopOf="@+id/temperature_high"
+                app:layout_constraintStart_toEndOf="@+id/high_label"
+                app:layout_constraintTop_toTopOf="@+id/high_label" />
+
+            <TextView
+                android:id="@+id/temperature_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/now_label"
+                app:layout_constraintStart_toStartOf="@+id/now_label"
+                app:layout_constraintTop_toBottomOf="@+id/now_label"
+                tools:text="67°" />
+
+            <TextView
+                android:id="@+id/temperature_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/today_plus_3_label"
+                app:layout_constraintEnd_toEndOf="@+id/high_label"
+                app:layout_constraintStart_toStartOf="@+id/high_label"
+                app:layout_constraintTop_toBottomOf="@+id/high_label"
+                tools:text="67°" />
+
+            <TextView
+                android:id="@+id/temperature_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/low_label"
+                app:layout_constraintStart_toStartOf="@+id/low_label"
+                app:layout_constraintTop_toBottomOf="@+id/low_label"
+                tools:text="67°" />
+
+            <TextView
+                android:id="@+id/today_plus_1_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/today_plus_2_label"
+                app:layout_constraintEnd_toStartOf="@+id/today_plus_2_label"
+                tools:text="MON" />
+
+            <TextView
+                android:id="@+id/today_plus_2_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/today_plus_3_label"
+                app:layout_constraintEnd_toStartOf="@+id/today_plus_3_label"
+                tools:text="TUE" />
+
+            <TextView
+                android:id="@+id/today_plus_3_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toTopOf="@+id/today_plus_3_forecast_icon"
+                app:layout_constraintEnd_toEndOf="@+id/temperature_high"
+                app:layout_constraintStart_toStartOf="@+id/temperature_high"
+                app:layout_constraintTop_toBottomOf="@+id/temperature_high"
+                tools:text="WED" />
+
+            <TextView
+                android:id="@+id/today_plus_4_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/today_plus_3_label"
+                app:layout_constraintStart_toEndOf="@+id/today_plus_3_label"
+                tools:text="THU" />
+
+            <TextView
+                android:id="@+id/today_plus_5_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/today_plus_4_label"
+                app:layout_constraintStart_toEndOf="@+id/today_plus_4_label"
+                tools:text="FRI" />
+
+            <ImageView
+                android:id="@+id/today_plus_1_forecast_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/today_plus_1_label"
+                app:layout_constraintStart_toStartOf="@+id/today_plus_1_label"
+                app:layout_constraintTop_toBottomOf="@+id/today_plus_1_label" />
+
+            <ImageView
+                android:id="@+id/today_plus_2_forecast_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/today_plus_2_label"
+                app:layout_constraintStart_toStartOf="@+id/today_plus_2_label"
+                app:layout_constraintTop_toBottomOf="@+id/today_plus_2_label" />
+
+            <ImageView
+                android:id="@+id/today_plus_3_forecast_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_okay"
+                app:layout_constraintEnd_toEndOf="@+id/today_plus_3_label"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="@+id/today_plus_3_label"
+                app:layout_constraintTop_toBottomOf="@+id/today_plus_3_label" />
+
+            <ImageView
+                android:id="@+id/today_plus_4_forecast_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/today_plus_4_label"
+                app:layout_constraintStart_toStartOf="@+id/today_plus_4_label"
+                app:layout_constraintTop_toBottomOf="@+id/today_plus_4_label" />
+
+            <ImageView
+                android:id="@+id/today_plus_5_forecast_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/today_plus_5_label"
+                app:layout_constraintStart_toStartOf="@+id/today_plus_5_label"
+                app:layout_constraintTop_toBottomOf="@+id/today_plus_5_label" />
+
+            <Button
+                android:id="@+id/btn_okay"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginTop="@dimen/_14dp"
+                android:background="@drawable/primary_button_background"
+                android:drawablePadding="@dimen/_10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingStart="@dimen/_20dp"
+                android:paddingEnd="@dimen/_24dp"
+                android:text="@string/okay"
+                android:textColor="@drawable/text_button_color"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/today_plus_3_forecast_icon"
+                app:layout_constraintWidth_percent=".35" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

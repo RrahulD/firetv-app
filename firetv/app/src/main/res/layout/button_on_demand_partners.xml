@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/_15dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/partnerPlayButton"
+        tools:text="Netflix"
+        android:textSize="@dimen/_20sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/parental_pin_heading_text_color"
+        android:nextFocusLeft="@+id/partnerPlayButton"
+        android:nextFocusRight="@+id/partnerPlayButton"
+        android:focusable="true"
+        android:paddingTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_10dp"
+        android:paddingStart="@dimen/_40dp"
+        android:paddingEnd="@dimen/_40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/primary_button_background"
+        android:focusableInTouchMode="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

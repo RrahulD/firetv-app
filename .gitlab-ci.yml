@@ -1,0 +1,80 @@
+image: cloudnative-docker.imovetv.com/docker-base:19.03
+default:
+    tags:
+      - dc-d-gp2-large
+stages:
+- build
+- test
+- upload-artifacts
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_HOST: tcp://localhost:2375
+  SAST_DISABLE_DIND: "true"
+  DS_DISABLE_DIND: "false"
+  GOCACHE: "$CI_PROJECT_DIR/.cache"
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+
+
+cache:
+  key: ${CI_PROJECT_NAME}
+  paths:
+    - .cache/
+    - $CI_PROJECT_DIR/firetv/.gradle/
+
+build:
+  stage: build
+  image: devopscoe-container.docker.imovetv.com/andriod-app-setting:latest
+  before_script:
+    - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    - export GRADLE_USER_HOME=$(pwd)/firetv/.gradle
+    - cd firetv
+    - chmod +x ./gradlew
+  script:
+    - ./gradlew clean assemble
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/firetv/app/build/outputs/
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop' ||  $CI_COMMIT_BRANCH =~ /release/ || $CI_COMMIT_TAG =~ /\d+.\d+.\d+.\d+/
+
+unit_test:
+  stage: test
+  image: devopscoe-container.docker.imovetv.com/andriod-app-setting:latest
+  before_script:
+    - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    - export GRADLE_USER_HOME=$(pwd)/firetv/.gradle
+    - cd firetv
+    - chmod +x ./gradlew
+  script:
+    - ./gradlew testDebugUnitTest
+  artifacts:
+    name: "reports_${CI_PROJECT_NAME}_${CI_BUILD_REF_NAME}"
+    paths:
+      - $CI_PROJECT_DIR/firetv/app/build/reports/tests/
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop' ||  $CI_COMMIT_BRANCH =~ /release/ || $CI_COMMIT_TAG =~ /\d+.\d+.\d+.\d+/
+
+upload-artifacts:
+  stage: upload-artifacts
+  dependencies:
+    - build
+  image: alpine:3.14
+  before_script:
+    - apk --no-cache add curl
+    # Install JFrog CLI and configure access to the artifactory
+    - curl -fL https://getcli.jfrog.io | sh
+    - ./jfrog config add artifactory-server --artifactory-url=$CI_REGISTRY --user=$CI_USER --password=$CI_USER_KEY --interactive=false
+    - ./jfrog rt ping
+  script:
+    - ls -aL ./firetv/app/build/outputs/apk/
+    - |- 
+        local_path=./firetv/app/build/outputs/apk/
+        target_path=onstream/onstream-firetv-client/
+        ./jfrog rt upload ${local_path} ${target_path}
+        echo "Build artifact ${local_path} uploaded to ${CI_REGISTRY}/${target_path}"
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop' ||  $CI_COMMIT_BRANCH =~ /release/ || $CI_COMMIT_TAG =~ /\d+.\d+.\d+.\d+/
+

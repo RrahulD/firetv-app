@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingVertical="@dimen/carousel_widget_vertical_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/content_guideline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/status_chip"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8dp"
+        android:background="@drawable/live_chip_background"
+        android:backgroundTint="@color/live_chip_background_carousel"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8dp"
+        android:paddingVertical="@dimen/_4dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <View
+            android:id="@+id/live_dot"
+            android:layout_width="@dimen/_14dp"
+            android:layout_height="@dimen/_14dp"
+            android:background="@drawable/icon_live" />
+
+        <TextView
+            android:id="@+id/live_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4dp"
+            android:text="@string/live"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/program_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/widget_heading"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="@id/content_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_chip"
+        tools:text="Barcelona vs Madrid: El Classico Game 2 Live From Camp Nou" />
+
+    <ImageView
+        android:id="@+id/channel_logo"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_60dp"
+        android:layout_margin="@dimen/_8dp"
+        android:paddingTop="@dimen/_4dp"
+        android:scaleType="fitStart"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/program_title"
+        tools:src="@drawable/ic_article" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_4dp"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.1"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintEnd_toStartOf="@id/content_guideline"
+        app:layout_constraintStart_toEndOf="@id/channel_logo"
+        app:layout_constraintTop_toTopOf="@id/channel_logo"
+        tools:text="Unfortunately this content could not be loaded. We’re sorry. Please select something else or try again later. " />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4dp"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toStartOf="@id/content_guideline"
+        app:layout_constraintStart_toStartOf="@id/subtitle"
+        app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/watch_button_top_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="channel_logo,subtitle,description" />
+
+    <Button
+        android:id="@+id/btn_watch"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/primary_button_background"
+        android:drawableStart="@drawable/ic_play_epg_dialog"
+        android:drawablePadding="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:paddingHorizontal="@dimen/_14dp"
+        android:text="@string/watch_live"
+        android:textColor="@drawable/text_button_color"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/watch_button_top_barrier"
+        tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/content_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="channel_logo,program_title,subtitle"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout>

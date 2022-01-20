@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/search_vod_item_width"
+    android:layout_height="@dimen/search_vod_item_height"
+    android:layout_marginEnd="@dimen/_4dp"
+    android:layout_marginBottom="@dimen/_4dp"
+    android:background="@drawable/widget_resident_template_selector_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="@dimen/_5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:cardElevation="@dimen/_0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itemImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dish_image_not_found"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+</tv.accedo.dishonstream2.ui.view.FocusableLockFrameLayout>

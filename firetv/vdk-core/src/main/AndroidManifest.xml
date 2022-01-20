@@ -1,0 +1,16 @@
+<manifest package="hu.accedo.commons"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application>
+
+        <provider
+            android:authorities="${applicationId}.VdkAnalytics"
+            android:exported="false"
+            android:enabled="true"
+            android:name=".logging.VdkAnalytics"/>
+
+    </application>
+
+</manifest>

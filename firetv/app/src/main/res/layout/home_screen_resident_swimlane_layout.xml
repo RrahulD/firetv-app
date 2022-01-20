@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8dp"
+    android:layout_marginBottom="@dimen/_10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_4dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_22sp"
+        tools:text="Live channels" />
+
+    <tv.accedo.dishonstream2.ui.main.home.component.swimlane.SwimLane
+        android:id="@+id/swim_lane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_8dp" />
+</LinearLayout>

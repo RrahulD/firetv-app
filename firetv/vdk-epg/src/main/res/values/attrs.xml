@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EpgView">
+        <attr name="epgview_channels_width" format="dimension"/>
+        <attr name="epgview_timebar_height" format="dimension"/>
+        <attr name="epgview_timebar_offset_horizontal" format="dimension"/>
+        <attr name="epgview_timebar_minute_stepping" format="integer"/>
+        <attr name="epgview_hairline_text_width" format="dimension"/>
+        <attr name="epgview_minute_width" format="dimension"/>
+        <attr name="epgview_hour_offset" format="integer"/>
+        <attr name="epgview_row_height" format="dimension"/>
+        <attr name="epgview_update_frequency_seconds" format="integer"/>
+        <attr name="epgview_page_size_vertical" format="integer"/>
+        <attr name="epgview_page_size_horizontal" format="enum">
+            <enum name="no_pagination" value="0"/>
+            <enum name="_1h" value="1"/>
+            <enum name="_2h" value="2"/>
+            <enum name="_4h" value="4"/>
+            <enum name="_6h" value="6"/>
+            <enum name="_12h" value="12"/>
+            <enum name="_24h" value="24"/>
+        </attr>
+        <attr name="epgview_view_cache_size" format="integer"/>
+        <attr name="epgview_progress_view" format="reference"/>
+        <attr name="epgview_empty_view" format="reference"/>
+        <attr name="epgview_secondary_progress_enabled" format="boolean"/>
+        <attr name="epgview_days_forward" format="integer"/>
+        <attr name="epgview_days_backwards" format="integer"/>
+        <attr name="epgview_extra_padding_bottom" format="dimension"/>
+        <attr name="epgview_sticky_programs_enabled" format="boolean"/>
+        <attr name="epgview_timebar_label_enabled" format="boolean"/>
+        <attr name="epgview_diagonal_scroll_enabled" format="boolean"/>
+        <attr name="epgview_diagonal_scroll_detection_offset" format="dimension"/>
+        <attr name="epgview_placeholders_enabled" format="boolean"/>
+        <attr name="epgview_placeholders_on_firstload_enabled" format="boolean"/>
+        <attr name="epgview_placeholders_page_size" format="enum">
+            <enum name="no_pagination" value="0"/>
+            <enum name="_1h" value="1"/>
+            <enum name="_2h" value="2"/>
+            <enum name="_4h" value="4"/>
+            <enum name="_6h" value="6"/>
+            <enum name="_12h" value="12"/>
+            <enum name="_24h" value="24"/>
+        </attr>
+        <attr name="epgview_looping_enabled" format="boolean"/>
+        <attr name="epgview_view_clipping_enabled" format="boolean"/>
+        <attr name="epgview_threadsafe" format="boolean"/>
+    </declare-styleable>
+</resources>

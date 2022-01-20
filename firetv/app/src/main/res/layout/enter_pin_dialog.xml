@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/parental_pin_dialog_background_color"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey_900"
+        app:cardCornerRadius="@dimen/_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/parental_pin_dialog_background"
+        app:layout_constraintWidth_percent=".7">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/grey_900"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/enterPinText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:text="@string/enter_your_pin"
+        android:textColor="@color/parental_pin_heading_text_color"
+        android:textSize="@dimen/_30dp"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/pinDescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_24dp"
+        android:text="@string/enter_your_pin_description"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sp"
+        android:paddingLeft="@dimen/_10dp"
+        android:paddingRight="@dimen/_10dp"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterPinText"
+        android:gravity="center"/>
+
+    <tv.accedo.dishonstream2.ui.view.CustomOnScreenNumberKeyboard
+        android:id="@+id/numberKeyboardLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinDescriptionText" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_21dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberKeyboardLayout">
+
+        <EditText
+            android:id="@+id/pinEditText"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:textSize="@dimen/_35dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:maxLength="4"
+            android:visibility="gone"
+            android:background="@drawable/rounded_background" />
+        <EditText
+            android:id="@+id/pin1EditText"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:textSize="@dimen/_35dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:maxLength="1"
+            android:inputType="numberPassword"
+            android:background="@drawable/rounded_background" />
+
+        <EditText
+            android:id="@+id/pin2EditText"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:maxLength="1"
+            android:textSize="@dimen/_35dp"
+            android:inputType="numberPassword"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_background" />
+
+        <EditText
+            android:id="@+id/pin3EditText"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:maxLength="1"
+            android:textSize="@dimen/_35dp"
+            android:textColor="@color/white"
+            android:inputType="numberPassword"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_background" />
+
+        <EditText
+            android:id="@+id/pin4EditText"
+            android:textSize="@dimen/_35dp"
+            android:textColor="@color/white"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:maxLength="1"
+            android:inputType="numberPassword"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_background" />
+    </LinearLayout>
+
+            <TextView
+                android:id="@+id/incorrectPinText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_gravity="center"
+                android:textColor="@color/red_900"
+                android:visibility="invisible"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

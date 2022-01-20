@@ -1,0 +1,47 @@
+{
+  "unnecessryDepth": {
+    "yetAnotherUnnecessryDepth": {
+      "goodBoolean": true,
+      "badBoolean": "yup",
+      "goodNumber": 123,
+      "badNumber": "",
+      "theKeysAreValues": {
+        "Jack": {
+          "gender": "male",
+          "birthday": "tuesday"
+        },
+        "Jill": {
+          "gender": "female",
+          "birthday": "winter"
+        }
+      },
+      "weirdImageArray": [
+        {
+          "type": "image",
+          "image": {
+            "url": {
+              "href": {
+                "target": "https://c1.staticflickr.com/4/3542/3643545316_0453264f6d.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "cat",
+          "name": "Pinky"
+        },
+        {
+          "type": "image",
+          "image": {
+            "url": {
+              "href": {
+                "target": "http://www.rd.com/wp-content/uploads/sites/2/2016/02/06-train-cat-shake-hands.jpg"
+              }
+            }
+          }
+        }
+      ],
+      "string": "Hello World"
+    }
+  }
+}
